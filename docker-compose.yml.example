@@ -20,9 +20,9 @@ services:
     ports:
       - "5433:5432"
     environment:
-      POSTGRES_DB: lab3
-      POSTGRES_USER: calburez
-      POSTGRES_PASSWORD: Sportnicho1
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - pgdata:/var/lib/postgresql/data
     env_file:
